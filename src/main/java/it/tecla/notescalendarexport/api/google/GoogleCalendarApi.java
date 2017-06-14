@@ -130,20 +130,7 @@ public class GoogleCalendarApi {
 	}
 	
 	public boolean isSameEvent(Event ev1, Event ev2) {
-//		return ev1.getId().equals(ev2.getId());
 		return ev1.getICalUID().equals(ev2.getICalUID());
-	}
-	
-	public static void main(String[] args) throws Exception {
-
-		// TODO cancellare metodo main
-		GoogleCalendarApi googleCalendarApi = new GoogleCalendarApi();
-		
-		List<Event> events = googleCalendarApi.getEvents("TECLA");
-		
-		for (Event event : events) {
-			System.out.println(event.getICalUID());
-		}
 	}
 
 }

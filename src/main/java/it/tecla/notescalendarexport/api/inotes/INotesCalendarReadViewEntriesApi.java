@@ -13,7 +13,6 @@ import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.UriBuilder;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
-import org.apache.commons.lang3.time.DateUtils;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import org.glassfish.jersey.logging.LoggingFeature;
 import org.slf4j.Logger;
@@ -75,11 +74,6 @@ public class INotesCalendarReadViewEntriesApi {
 		INotesCalendarReadViewEntriesResponse iNotesCalendarReaderResponse = new INotesCalendarReadViewEntriesResponse();
 		iNotesCalendarReaderResponse.setViewentries(viewentries);
 		return iNotesCalendarReaderResponse;
-	}
-	
-	public static void main(String[] args) throws Exception {
-		// TODO cancellare metodo main
-		System.out.println(new INotesCalendarReadViewEntriesApi().getCalendarEntries(DateUtils.parseDate("2017-01-01", "yyyy-MM-dd"), DateUtils.parseDate("2017-12-31", "yyyy-MM-dd")));
 	}
 
 }
